@@ -1,27 +1,17 @@
-<link rel="stylesheet" type="text/css" href="Fondo para mis comidas favoritas.css">
-<div class="collage">
-  <div class="collage-item">
-    <img src="pagina de comidas/sopa de frijoles.jpeg" alt="Sopa de frijoles">
-    <p>Sopa de frijoles</p>
-                <p><span style="color: #ffffff;">Las sopa de frijoles es una delicia </span></p>
+<!-- Video de YouTube en modal -->
+<img src="imagenesparaweb/mario galaxy.jpg" height="200" width="350" id="youtubeImg" style="cursor:pointer;">
 
-  </div>
-  <div class="collage-item">
-    <img src="pagina de comidas/espagetis.jpeg" alt="Espaguetis">
-    <p>Espaguetis</p>
-            <p><span style="color: #ffffff;">los spaguetis son una delicia tambien pero los que hace mi abuela no tiene precio su salsa es rica los sabores que tiene esa salsa hace que quieras comer mas o comer muy lento para difrutar mas y cuando terminas de comer quedas con un basio diciendo cuando volvere a comer spaguetis de mi abuela me pasa muy segido :"v</span></p>
-
-  </div>
-  <div class="collage-item">
-    <img src="pagina de comidas/baliadas.jpeg" alt="Baliadas">
-    <p>Baliadas</p>
-  </div>
-  <div class="collage-item">
-    <img src="pagina de comidas/Pupusas Salvadoreñas.jpeg" alt="Pupusas">
-    <p>Pupusas</p>
-  </div>
-  <div class="collage-item">
-    <img src="pagina de comidas/pai de limon.jpeg" alt="Pai de limón">
-    <p>Pai de limón</p>
-  </div>
+<div id="youtubeModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+  <iframe id="youtubeFrame" width="700" height="400" src="https://www.youtube.com/embed/rmN8DHZYNCg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <button onclick="cerrarYoutubeModal()" style="position:absolute; top:20px; right:40px; font-size:2em; background:none; color:white; border:none; cursor:pointer;">×</button>
 </div>
+
+<script>
+document.getElementById('youtubeImg').onclick = function() {
+  document.getElementById('youtubeModal').style.display = 'flex';
+};
+
+function cerrarYoutubeModal() {
+  document.getElementById('youtubeModal').style.display = 'none';
+}
+</script>
